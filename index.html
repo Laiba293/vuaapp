@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="row">
+      <nav
+        class="navbar navbar-dark bg-danger navbar-fixed-top navbar-expand-lg navigation-bg"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand">Navbar</a>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-secondary" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <div class="navigation">
+            <div class="menu-toggle"></div>
+            <ul class="list">
+              <li class="list-item active" style="--color: #f44336">
+                <a href="#">
+                  <span class="icon">
+                    <ion-icon name="home-outline"></ion-icon>
+                  </span>
+                  <span class="text">Home</span>
+                </a>
+              </li>
+              <li class="list-item" style="--color: #ffa117">
+                <a href="#">
+                  <span class="icon">
+                    <ion-icon name="alert-outline"></ion-icon>
+                  </span>
+                  <span class="text">About</span>
+                </a>
+              </li>
+              <li class="list-item" style="--color: #0fc70f">
+                <a href="#">
+                  <span class="icon">
+                    <ion-icon name="call-outline"></ion-icon>
+                  </span>
+                  <span class="text">Contact</span>
+                </a>
+              </li>
+              <li class="list-item" style="--color: #2196f3">
+                <a href="#">
+                  <span class="icon">
+                    <ion-icon name="grid-outline"></ion-icon>
+                  </span>
+                  <span class="text">Portfolio</span>
+                </a>
+              </li>
+              <li class="list-item" style="--color: #99a3a4">
+                <a href="#">
+                  <span class="icon">
+                    <ion-icon name="pencil-outline"></ion-icon>
+                  </span>
+                  <span class="text">Blog</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <p class="relo">
+            The most important aspect of computer science is problem solving, an
+            essential skill for life. Students study the design, development and
+            analysis of software and hardware used to solve problems in a
+            variety of business, scientific and social contexts.Computer science
+            is the study of computers and computing as well as their theoretical
+            and practical applications. Computer science applies the principles
+            of mathematics, engineering, and logic to a plethora of functions,
+            including algorithm formulation, software and hardware development,
+            and artificial intelligence.
+          </p>
+        </div>
+
+        <div class="col-3">
+          <p class="relo">
+            Computer science is the study of computers and computing as well as
+            their theoretical and practical applications. Computer science
+            applies the principles of mathematics, engineering, and logic to a
+            plethora of functions, including algorithm formulation, software and
+            hardware development, and artificial intelligence. The most
+            important aspect of computer science is problem solving, an
+            essential skill for life. Students study the design, development and
+            analysis of software and hardware used to solve problems in a
+            variety of business, scientific and social contexts
+          </p>
+        </div>
+
+        <div class="col-3">
+          <form class="code relo">
+            <small class="form-text text-muted">Enter your code!</small>
+
+            <textarea
+              class="form-control"
+              rows="13"
+              placeholder="Enter your code"
+            >
+            </textarea>
+
+            <!-- <button class="btn-outline-dark mt-1" type="submit">Submit</button> -->
+            <button class="button5 mt-1" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-lg-3"></div>
+      <span class="icon">
+        <ion-icon id="start-camera" name="camera"></ion-icon>
+      </span>
+
+      <video id="video" width="320" height="240" autoplay></video>
+      <button id="start-record">Start Recording</button><br /><br />
+      <button id="stop-record">Stop Recording</button>
+      <a id="download-video" download="test.webm">Download Video</a>
+    </div>
+
+    <div id="output"></div>
+    <br />
+
+    <script>
+      let output = document.getElementById("output");
+
+      window.onblur = function () {
+        output.innerHTML += "browser tab is changed </br>";
+      };
+
+      window.onfocus = function () {
+        output.innerHTML += "Browser tab is again active! </br>";
+      };
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
